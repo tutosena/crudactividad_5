@@ -15,7 +15,7 @@
 		<div id="div2">
 			<?php 
 				session_start();
-				if(! empty($_SESSION['Tipo_usuario'])){
+				if(!empty($_SESSION['Tipo_usuario'])){
 
 			?>
 			<img src="IMAGENES/banner3.png"> <?php } ?>
@@ -44,26 +44,26 @@
 							</div>
 
 							<div class="form-group col-m-6">
-								<input class="form-control input-lg" type="number" name="numid" min="999" max="9999999999999" value="" placeholder="IDENTIFICACION" required/>
+								<input class="form-control input-lg" type="number" name="numid" min="999" max="9999999999999"  placeholder="IDENTIFICACION" required/>
 								
 							</div>
 
 						</div>
 
 							<label class="lgris">Nombres:</label>
-							<input class="form-control" style="text-transform: uppercase;" type="text" name="nombres" value="" placeholder="Nombres" required/>
+							<input class="form-control" style="text-transform: uppercase;" type="text" name="nombres" placeholder="Nombres" required/>
 
 							<label class="lgris">Apellidos:</label>
-							<input class="form-control" style="text-transform: uppercase;" type="text" name="apellidos" value="" placeholder="Apellidos" required/>
+							<input class="form-control" style="text-transform: uppercase;" type="text" name="apellidos"  placeholder="Apellidos" required/>
 
 							<label class="lgris">Dirección:</label>
-							<input class="form-control" style="text-transform: uppercase;" type="text" name="direccion" value="" placeholder="Dirección" required/>
+							<input class="form-control" style="text-transform: uppercase;" type="text" name="direccion"  placeholder="Dirección" required/>
 
 							<label class="lgris">Teléfono:</label>
-							<input class="form-control" type="number" name="telefono" min="999" max="9999999999999" value="" placeholder="Teléfono" required/>
+							<input class="form-control" type="number" name="telefono" min="999" max="9999999999999" placeholder="Teléfono" required/>
 
 							<label class="lgris">Ficha:</label>
-							<input class="form-control" type="number" name="ficha" min="999" max="9999999999999" value="" placeholder="Ficha" required/>
+							<input class="form-control" type="number" name="ficha" min="999" max="9999999999999"  placeholder="Ficha" required/>
 
 							<br>
 

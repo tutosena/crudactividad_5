@@ -22,16 +22,16 @@
 						<div class="form-row">
 							<div class="form-group col-md-3">
 
-								<input class="form-control input-lg" type="number" name="numid" min="999" max="9999999999999" value="" placeholder="IDENTIFICACION" required/>
+								<input class="form-control input-lg" type="number" name="numid" min="999" max="9999999999999"  placeholder="IDENTIFICACION" required/>
 								
 							</div>
 
 							<div class="form-group col-md-3">
-								<input class="form-control" style="text-transform: uppercase;" type="text" name="nombres" value="" placeholder="Nombres" required/>
+								<input class="form-control" style="text-transform: uppercase;" type="text" name="nombres"  placeholder="Nombres" required/>
 							</div>
 
 							<div class="form-group col-md-3">
-								<input class="form-control" style="text-transform: uppercase;" type="text" name="apellidos" value="" placeholder="Apellidos" required/>
+								<input class="form-control" style="text-transform: uppercase;" type="text" name="apellidos"  placeholder="Apellidos" required/>
 							</div>
 
 							<div class="form-group col-md-3">

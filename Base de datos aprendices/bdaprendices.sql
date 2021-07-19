@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-06-2021 a las 21:17:59
+-- Tiempo de generación: 19-07-2021 a las 23:23:49
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -39,6 +39,13 @@ CREATE TABLE `tblaprendices` (
   `apre_ficha` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `tblaprendices`
+--
+
+INSERT INTO `tblaprendices` (`apre_id`, `apre_tipoid`, `apre_numid`, `apre_nombres`, `apre_apellidos`, `apre_direccion`, `apre_telefono`, `apre_ficha`) VALUES
+(3, 'CC', '98470778', 'OMAR', 'MONSALVE', 'CARRERA 19B #16C-57', '3205612458', 2068058);
+
 -- --------------------------------------------------------
 
 --
@@ -46,7 +53,7 @@ CREATE TABLE `tblaprendices` (
 --
 
 CREATE TABLE `tblficha` (
-  `ficha_numero` int(10) DEFAULT NULL,
+  `ficha_numero` int(10) NOT NULL,
   `ficha_progra` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -87,6 +94,13 @@ CREATE TABLE `tblusuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `tblusuario`
+--
+
+INSERT INTO `tblusuario` (`usua_id`, `usua_nomuser`, `usua_contra`, `usua_tipo`) VALUES
+(1065598062, 'EDUARDSENA', '123456', 'ADMINISTRADOR');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -94,21 +108,19 @@ CREATE TABLE `tblusuario` (
 -- Indices de la tabla `tblaprendices`
 --
 ALTER TABLE `tblaprendices`
-  ADD PRIMARY KEY (`apre_id`),
-  ADD KEY `apre_ficha` (`apre_ficha`);
+  ADD PRIMARY KEY (`apre_id`);
 
 --
 -- Indices de la tabla `tblficha`
 --
 ALTER TABLE `tblficha`
-  ADD KEY `ficha_progra` (`ficha_progra`);
+  ADD PRIMARY KEY (`ficha_numero`);
 
 --
 -- Indices de la tabla `tblprograma`
 --
 ALTER TABLE `tblprograma`
-  ADD PRIMARY KEY (`prograp_id`),
-  ADD KEY `progra_tipo` (`progra_tipo`);
+  ADD PRIMARY KEY (`prograp_id`);
 
 --
 -- Indices de la tabla `tbltiposprograma`
@@ -123,26 +135,14 @@ ALTER TABLE `tblusuario`
   ADD PRIMARY KEY (`usua_id`);
 
 --
--- Restricciones para tablas volcadas
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- Filtros para la tabla `tblaprendices`
+-- AUTO_INCREMENT de la tabla `tblaprendices`
 --
 ALTER TABLE `tblaprendices`
-  ADD CONSTRAINT `apre_ficha` FOREIGN KEY (`apre_ficha`) REFERENCES `tblficha` (`ficha_progra`);
-
---
--- Filtros para la tabla `tblficha`
---
-ALTER TABLE `tblficha`
-  ADD CONSTRAINT `ficha_progra` FOREIGN KEY (`ficha_progra`) REFERENCES `tblprograma` (`prograp_id`);
-
---
--- Filtros para la tabla `tblprograma`
---
-ALTER TABLE `tblprograma`
-  ADD CONSTRAINT `progra_tipo` FOREIGN KEY (`progra_tipo`) REFERENCES `tbltiposprograma` (`tiposp_id`);
+  MODIFY `apre_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

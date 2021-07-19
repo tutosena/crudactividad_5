@@ -60,19 +60,19 @@
 							<div class="col-md-12">
 								<strong class="lgris">Datos del aprendiz</strong><br>
 								<label class="lgris">Id:</label>
-								<input class="form-control" style="text-transform: uppercase;" type="text" name="ide" disabled="disabled" value="<?php echo $fila->apre_id ?>">
+								<input class="form-control" style="text-transform: uppercase;" type="text" name="numidModi" readonly="readonly" value="<?php echo $fila->apre_numid; ?>">
 
 								<label class="lgris">Nombres:</label>
-								<input class="form-control" style="text-transform: uppercase;" type="text" name="nombres" disabled="disabled" value="<?php echo $fila->apre_nombres ?>">
+								<input class="form-control" style="text-transform: uppercase;" type="text" name="nombres" readonly="readonly" value="<?php echo $fila->apre_nombres; ?>">
 
 								<label class="lgris">Apellidos:</label>
-								<input class="form-control" style="text-transform: uppercase;" type="text" name="apellidos" disabled="disabled" value="<?php echo $fila->apre_apellidos ?>">
+								<input class="form-control" style="text-transform: uppercase;" type="text" name="apellidos" readonly="readonly" value="<?php echo $fila->apre_apellidos; ?>">
 
 								<label class="lgris">Dirección:</label>
-								<input class="form-control" style="text-transform: uppercase;" type="text" name="direccion" disabled="disabled" value="<?php echo $fila->apre_direccion ?>">
+								<input class="form-control" style="text-transform: uppercase;" type="text" name="direccion" readonly="readonly" value="<?php echo $fila->apre_direccion; ?>">
 
 								<label class="lgris">Télefono:</label>
-								<input class="form-control" type="number" name="telefono" min="999" max="9999999999999" value="<?php echo $fila->apre_telefono ?>" />
+								<input class="form-control" type="number" name="telefono" min="999" max="9999999999999" value="<?php echo $fila->apre_telefono; ?>" />
 
 								<input class="btn btn-primary" type="submit" value="Actualizar">
 
